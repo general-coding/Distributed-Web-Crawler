@@ -1,0 +1,16 @@
+test by tarun
+
+<<<<<<< Updated upstream
+http://www-rohan.sdsu.edu/~gawron/python_for_ss/course_core/book_draft/index.html
+=======
+TEST BY PUNEETH
+>>>>>>> Stashed changes
+
+Use this documentation to understand BeautifulSoup html parsing package.
+Follow all installatin instruction and try a sample code.
+http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+
+Dynamic Web Crawler
+
+http://math.nist.gov/~RPozo/ngraph/webcrawler.html

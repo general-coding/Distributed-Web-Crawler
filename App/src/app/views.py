@@ -8,7 +8,6 @@ from app import app
 from flask.templating import render_template 
 from flask import request, redirect, url_for
 from crawler.Crawl_Master import init
-#from flask.helpers import url_for
 
 @app.route('/')
 @app.route('/index')
@@ -24,7 +23,7 @@ def index():
 @app.route('/crawl', methods=['POST'])
 def crawl():
     url = request.form['url']
-    print("We will crawl : " + url)
+#     print("We will crawl : " + url)
     
     init(url)
     return redirect(url_for('display'))

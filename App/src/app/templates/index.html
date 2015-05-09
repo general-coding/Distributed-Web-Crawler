@@ -22,6 +22,23 @@
 			alert("URL must be filled out");
 			return false;
 		}
+		/* if(!x.startsWith("http")){
+			x = "http://" + x;
+			document.forms["myForm"]["url"].value = x;
+		} */
+		return true;
+	}
+	function https(){
+		var x = document.forms["myForm"]["url"].value;
+		/* if (x == null || x == "") {
+			alert("URL must be filled out");
+			return false;
+		} */
+		if(!x.startsWith("http")){
+			x = "https://" + x;
+			document.forms["myForm"]["url"].value = x;
+		}
+		return true;
 	}
 </script>
 
@@ -35,7 +52,7 @@
 				<div class="account-wall" role="form" method="POST" action="">
 					<form class="form-signin" action="crawl" method="post"
 						name="myForm" onsubmit="return validateForm()">
-						<input class='form-control' type="text" name="url"></input> <br>
+						<input class='form-control' type="text" name="url" onblur="https()""></input> <br>
 						<br>
 						<button class="btn btn-lg btn-primary btn-block" type="submit"
 							value="Crawl">Go</button>

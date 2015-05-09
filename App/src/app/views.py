@@ -7,7 +7,7 @@ Created on Apr 29, 2015
 from app import app
 from flask.templating import render_template 
 from flask import request, redirect, url_for
-from crawler.Crawl_Master import init
+from crawler.Crawl_Master import start_crawl
 
 @app.route('/')
 @app.route('/index')
@@ -25,12 +25,12 @@ def crawl():
     url = request.form['url']
 #     print("We will crawl : " + url)
     
-    init(url)
+    start_crawl(url)
     return redirect(url_for('display'))
 
 @app.route('/display')
 def display():
-    print("Urls below:")
+#     print("Urls below:")
     
     f= open('input.txt','r')
     j=[]

@@ -15,7 +15,7 @@ from urllib.error import HTTPError
 
 def crawl(url):
     try:
-#         print('Crawling:', url)
+        print('Crawling:', url)
         http = urllib3.PoolManager()
 #         response = http.request('GET', url)
         response = urllib.request.urlopen(url)
@@ -32,7 +32,7 @@ def crawl(url):
         for link in all_links:
             try:
                 link_httpx = link.get('href')
-#                 print(link_httpx)
+                print(link_httpx)
     #             print(link_httpx.startswith('http'), link_httpx.startswith('https'))
                 if link_httpx.startswith('http') or link_httpx.startswith('https'): 
                     list_of_links.append(link.get('href'))
@@ -70,7 +70,7 @@ def crawl(url):
         pass
 
 def s3():
-    access_token_file = open('/home/puneeth/workspace/App/src/crawler/key.txt')
+    access_token_file = open('key.txt')
     access_token = access_token_file.read()
     access_token_file.close()
     
@@ -140,18 +140,18 @@ def concat_file():
     os.remove('list_links_a.txt')
     os.remove('list_links_b.txt')
 
-def start_crawl(url):
-    # url = input('Please enter the source URL: ')
-    print('crawl')
-    crawl(url)
+url = input('Please enter the source URL: ')
+print('crawl')
+crawl(url)
     
     # sleep(5)
-    print('upload')
-    upload()
+print('upload')
+upload()
     
     # sleep(5)
-    print('download')
-    download()
+print('download')
+download()
     
     # sleep(5)
-    concat_file()
+print('concat')
+concat_file()

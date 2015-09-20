@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Distributed-Web-Crawler.iml" filepath="$PROJECT_DIR$/.idea/Distributed-Web-Crawler.iml" />
+      <module fileurl="file://D:/539194/MyWorkSpace/6331/GoogleCloudStorage/.idea/GoogleCloudStorage.iml" filepath="D:/539194/MyWorkSpace/6331/GoogleCloudStorage/.idea/GoogleCloudStorage.iml" />
     </modules>
   </component>
 </project>
